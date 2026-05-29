@@ -12,12 +12,21 @@ __pycache__/
 .env.production.local
 .env.development
 .env.test
+.hermes-docker/
+.notebooklm-home/
+.notebooklm-cli-venv/
+.notebooklm-playwright/
+.pip-cache/
+.uv-cache/
+compose.hermes.local.yml
 export*
 __pycache__/model_tools.cpython-310.pyc
 __pycache__/web_tools.cpython-310.pyc
 logs/
 data/
 .pytest_cache/
+test_durations.json
+.pytest-cache/
 tmp/
 temp_vision_images/
 hermes-*/*
@@ -69,6 +78,12 @@ mini-swe-agent/
 .nix-stamps/
 result
 website/static/api/skills-index.json
+# skills.json + skills-meta.json are build artifacts emitted by
+# website/scripts/extract-skills.py during prebuild — keep them out of
+# git for the same reason as skills-index.json (large, generated, change
+# every build).
+website/static/api/skills.json
+website/static/api/skills-meta.json
 models-dev-upstream/
 Learning/olympiad-math/2025 IHC D-5发布版(25冬令营).pdf
 Learning/olympiad-math/2025HMTC-I-D-5-发布版(25夏令营).pdf
@@ -80,3 +95,10 @@ Learning/olympiad-math/IHC-2026冬令营-原始文本.txt
 Learning/olympiad-math/IHC-2026培训题-原始文本.txt
 Learning/worldcup/
 Learning/news/
+hermes_cli/tui_dist/*
+hermes_cli/scripts/
+docs/superpowers/*
+# Working directory for the Hermes Agent's session state (~/.hermes/ at runtime;
+# also created in-repo when an agent operates in this checkout). Plans, audit
+# logs, and per-session caches are never artifacts of the codebase.
+.hermes/
