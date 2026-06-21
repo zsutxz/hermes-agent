@@ -6,6 +6,7 @@
 __pycache__/
 .venv/
 .venv
+venv_linux/
 .vscode/
 .env
 .env.local
@@ -94,6 +95,17 @@ website/static/api/skills-meta.json
 # website/scripts/extract-automation-blueprints.py during prebuild.
 website/static/api/automation-blueprints-index.json
 models-dev-upstream/
+# Local learning assets (large PDFs / scraped text)
+Learning/olympiad-math/2025 IHC D-5发布版(25冬令营).pdf
+Learning/olympiad-math/2025HMTC-I-D-5-发布版(25夏令营).pdf
+Learning/olympiad-math/2026 IHC D-5发布版(26冬令营).pdf
+Learning/olympiad-math/2026培训题5年级答案版.pdf
+Learning/olympiad-math/HMTC-2025夏令营-原始文本.txt
+Learning/olympiad-math/IHC-2025冬令营-原始文本.txt
+Learning/olympiad-math/IHC-2026冬令营-原始文本.txt
+Learning/olympiad-math/IHC-2026培训题-原始文本.txt
+Learning/worldcup/
+Learning/news/
 
 # Local editor / agent tooling (machine-specific; keep in global config, not the repo)
 .codex/
@@ -103,7 +115,6 @@ models-dev-upstream/
 .mcp.json
 opencode.json
 config/mcporter.json
-
 hermes_cli/tui_dist/*
 hermes_cli/scripts/
 docs/superpowers/*
