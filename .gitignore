@@ -113,6 +113,7 @@ Learning/news/
 .gemini/
 .zed/
 .mcp.json
+.claude/settings.local.json
 opencode.json
 config/mcporter.json
 hermes_cli/tui_dist/*
