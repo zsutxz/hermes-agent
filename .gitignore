@@ -6,7 +6,6 @@
 __pycache__/
 .venv/
 .venv
-venv_linux/
 .vscode/
 .env
 .env.local
@@ -95,10 +94,6 @@ website/static/api/skills-meta.json
 # website/scripts/extract-automation-blueprints.py during prebuild.
 website/static/api/automation-blueprints-index.json
 models-dev-upstream/
-# Local learning assets (large PDFs / scraped text)
-Learning/olympiad-math/
-Learning/worldcup/
-Learning/news/
 
 # Local editor / agent tooling (machine-specific; keep in global config, not the repo)
 .codex/
@@ -106,9 +101,9 @@ Learning/news/
 .gemini/
 .zed/
 .mcp.json
-.claude/settings.local.json
 opencode.json
 config/mcporter.json
+
 hermes_cli/tui_dist/*
 hermes_cli/scripts/
 docs/superpowers/*
@@ -142,4 +137,18 @@ RELEASE_v*.md
 # Desktop demo-run scratch output (hermes writes demo/*.txt during recorded
 # walkthroughs). Throwaway artifacts, never part of the app.
 apps/desktop/demo/
+
+# PR infographics are rendered locally and embedded in PR descriptions via the
+# image-provider (fal.media) URL — they are NEVER committed to the repo. The
+# PR body is the archive. See the hermes-agent-dev skill's
+# pr-infographic-workflow reference (storage rule + lapse #8 / #COMMIT-1).
+infographic/
+
+# === preserved local ignores (merged from fork) ===
+venv_linux/
+# Local learning assets (large PDFs / scraped text)
+Learning/olympiad-math/
+Learning/worldcup/
+Learning/news/
+.claude/settings.local.json
 .session-resume/last-session.json
